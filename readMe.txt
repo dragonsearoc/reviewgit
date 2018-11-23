@@ -10,3 +10,4 @@ git是免费软件
 .git有暂存区stage、master分支、HEAD指针
 
 Git跟踪修改，而不是文件
+Git跟踪文件的修改。
