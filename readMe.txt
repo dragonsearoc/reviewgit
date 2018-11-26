@@ -14,3 +14,4 @@ Git跟踪文件的修改。
 
 git checkout --撤销修改
 	回到最近一次git add或git commit状态
+	checkout --和checkout是两个命令，checkout“切换到另一个分支”
