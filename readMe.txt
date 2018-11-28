@@ -31,6 +31,7 @@ Git远程仓库（使用GitHub)
 	1)在GitHub上创建一个账号，假定邮箱dotayeats@163.com
 	2)使用ssh协议生产私钥、公钥，命令：ssh-keygen -t rsa -C "邮箱名"，默认在user目录下生成.ssh文件夹，有id_rsa.pub（公钥）、id_rsa（私钥）
 	3)在GitHub的个人设置setting的ssh-keys配置项中增加公钥的配置（将id_rsa.pub内容拷贝到配置项即可）
-
-
+	关联远程库：git remote add 远程库名字（一般origin） 远程库地址（如：https://github.com/dragonsearoc/reviewgit.git）
+	关联后，使用命令git push -u origin master第一次推送master分支的所有内容
+	此后，每次本地提交后，只要有必要，使用命令git push origin master推送最新修改
 
