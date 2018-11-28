@@ -12,6 +12,11 @@ git是免费软件
 Git跟踪修改，而不是文件
 Git跟踪文件的修改。
 
-git checkout --撤销修改
-	回到最近一次git add或git commit状态
-	checkout --和checkout是两个命令，checkout“切换到另一个分支”
+撤销修改
+	a)改乱工作区的内容，未git add到暂存区时（1.只修改工作区未add；2.修改工作区add到暂存区后未commit，再修改工作区）
+		使用命令git checkout -- 文件名，文件将回到最近一次git add或git commit后的状态
+	b)工作区的更改已git add到暂存区时
+		使用命令git reset HEAD 文件名，暂存区的修改将丢弃，回到a)，继续a)中操作
+	c)工作区的修改已git commit时（未pull到远程仓库）
+		使用命令git reset --hard <HEAD^|版本标识>,进行版本回退
+	（注：checkout --和checkout是两个命令，checkout“切换到另一个分支”）
