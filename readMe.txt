@@ -20,3 +20,9 @@ Git跟踪文件的修改。
 	c)工作区的修改已git commit时（未pull到远程仓库）
 		使用命令git reset --hard <HEAD^|版本标识>,进行版本回退
 	（注：checkout --和checkout是两个命令，checkout“切换到另一个分支”）
+
+删除文件
+	步骤：
+	1）rm 文件名
+	2）确定要删掉版本库中文件，先git rm 文件名，这样删除改文件这一改动提交到了暂存区，然后git commit，版本库中该文件就被删除了
+	3）误删、不想删了，使用命令git checkout -- 文件名，git会将版本库最新的该文件下到工作区中。
