@@ -41,4 +41,14 @@ Git远程仓库（使用GitHub)
 	ssh协议比http传输速率更快，而且http每次推送都需要口令，ssh不用。
 
 Git分支管理
+	Git通过HEAD指针指向当前分支指针（master或dev等分支指针），当前分支指针再指向当前分支的当前提交点，这样，HEAD指针就能确定当前的分支，已经当前分支的当前提交点。
+	当git checkout -b 分支名（dev）创建dev分支时，dev指针与master分支指向同一提交点，HEAD指针原本指向master变为指向dev，此时工作区的修改都是针对dev分支的，工作区修改提交后，dev指针移到，但master指针不变，在dev分支的工作完成后，合并到master时，最简单的方式就是让master指针指向dev的当前提交（Git的Fast-forward合并模式就是如此）。
+	合并完成后，dev分支就可以删除了，删除dev分支实际就是删除dev指针。
+	相关命令小结
+		git branch	//查看分支 有“*”标记的是当前工作分支
+		git branch 分支名称 //创建分支
+		git checkout 分支名称 //切换分支
+		git checkout -b 分支名称 //创建+切换分支
+		git merge 分支名称 //合并指定分支（分支名称）到当前分支
+		git branch -d 分支名称 //删除分支
 	
