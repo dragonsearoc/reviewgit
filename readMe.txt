@@ -35,3 +35,6 @@ Git远程仓库（使用GitHub)
 	关联后，使用命令git push -u origin master第一次推送master分支的所有内容
 	此后，每次本地提交后，只要有必要，使用命令git push origin master推送最新修改
 
+克隆远程仓库项目
+	git clone 远程仓库项目地址（如：git@github.com:dragonsearoc/gitskills.git）
+
