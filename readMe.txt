@@ -37,4 +37,5 @@ Git远程仓库（使用GitHub)
 
 克隆远程仓库项目
 	git clone 远程仓库项目地址（如：git@github.com:dragonsearoc/gitskills.git）
-
+	注：Git支持多种协议,如http（例https://github.com/dragonsearoc/reviewgit.git），ssh（git@github.com:dragonsearoc/gitskills.git）
+	ssh协议比http传输速率更快，而且http每次推送都需要口令，ssh不用。
