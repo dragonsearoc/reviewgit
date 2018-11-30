@@ -51,4 +51,5 @@ Git分支管理
 		git checkout -b 分支名称 //创建+切换分支
 		git merge 分支名称 //合并指定分支（分支名称）到当前分支
 		git branch -d 分支名称 //删除分支
+Git解决冲突
 	
