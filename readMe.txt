@@ -1,4 +1,5 @@
 这是复习git知识的项目
+
 2018/11/23
 
 git是分布式版本控制工具
@@ -56,4 +57,8 @@ Git解决冲突
 	打开冲突文件，看到Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容
 	查看分支合并的情况
 		git log --graph --pretty=oneline --abbrev-commit。
-	
+
+Git分支管理策略
+	Git合并分支时通常会优先尝试使用fast-forward模式，但这种模式下，删除分支后，git会丢失分支信息。
+	强制禁用fast-forward模式，git在merge时会生成一个新的commit，这样就可以通过分支历史看出分支信息。
+	禁用fast-forward模式的参数--no-ff
