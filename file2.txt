@@ -3,4 +3,5 @@ line 2
 我是在主干改
 Git创建分支快速且简单
 +++
---no-ff禁止fast-forward模式merge 
+--no-ff禁止fast-forward模式merge
+试试fast-forward
