@@ -115,4 +115,10 @@ Git操作标签
 	2.删除本地标签，使用命令【git tag -d 标签名称（如v1.0）】
 	3.删除已推送的标签，首先删除使用命令【git tag -d 标签名称（如v0.9）】删除本地标签，再使用命令【git push origin :refs/tags/标签名称（如v0.9）】
 	登录github查看远程标签是否删除。
+
+使用GitHub
+	小结：
+	1.在GitHub上，可以任意Fork开源仓库
+	2.自己拥有对Fork下来的仓库的读写权限
+	3.可以推送pull request给官方仓库来贡献代码。
 	
