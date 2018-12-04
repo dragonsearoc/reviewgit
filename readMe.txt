@@ -121,4 +121,27 @@ Git操作标签
 	1.在GitHub上，可以任意Fork开源仓库
 	2.自己拥有对Fork下来的仓库的读写权限
 	3.可以推送pull request给官方仓库来贡献代码。
-	
+
+Git自定义配置
+	1.命令【git config --global color.ui true】，让Git显示颜色，使命令输出更舒服。
+	2.忽略特殊文件
+		在git工作区下创建一个.gitignore文件，然后把要忽略的文件名填进去，Git提交时就会忽略那些文件。
+		在https://github.com/github/gitignore上有许多预设好的定义，按需组合下加到.gitignore即可。
+		忽略文件的原则；
+			a)忽略操作系统自动生成的文件，如缩略图等；
+			b)忽略编译生成的中间文件、可执行文件等，也就是通过另一个文件自动生成的，如Java编译生成的类文件.class。
+			c)忽略带有敏感信息的配置文件，如存放口令的配置文件。
+		强制Git提交忽略的文件，使用命令【git add -f 文件名】
+		查看.gitignore中那条规则忽略了文件，使用命令【git check-ignore -v 文件名】。
+		.gitignore文件要放到版本库里才能有效，并且可以对.gitignore做版本管理。
+	3.配置别名
+		a)给命令配置别名，方便偷懒，git config --global alias.别名（如st） 原命令名（如status）
+			常用的命令别名，co->checkout， ci->commit， br->branch，
+			撤销修改中，git reset HEAD 文件名将暂存区的修改撤销掉，重新回到工作区，通过git config --global alias.unstage reset HEAD，git unstage达到同样效果
+			配置git last命令，让git显示最后一次的提交信息，git config --global alias.last 'log -1'。
+			配置git lg按格式显示日志，git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+	4.配置文件
+	 --global是对当前用户的，不加则只对当前仓库有效
+	 当前仓库的配置文件放在.git/config文件中，cat .git/config即可查看。
+	 别名在[alias]后，要删除某个别名，删除对应行即可。
+	 当前用户的git配置文件放在用户主目录下的一个隐藏文件.gitconfig文件中
