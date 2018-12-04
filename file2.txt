@@ -7,3 +7,4 @@ Git创建分支快速且简单
 试试fast-forward
 commit一下
 再试试fast-forward
+试试git stash储存工作区，bug分支issue-101
