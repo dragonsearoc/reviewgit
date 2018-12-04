@@ -7,4 +7,4 @@ Git创建分支快速且简单
 试试fast-forward
 commit一下
 再试试fast-forward
-模拟多人协作
+模拟多人协作,编辑解决冲突
