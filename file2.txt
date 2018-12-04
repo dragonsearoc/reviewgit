@@ -8,3 +8,4 @@ Git创建分支快速且简单
 commit一下
 再试试fast-forward
 试试git stash储存工作区，bug分支issue-101
+多人合作
