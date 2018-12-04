@@ -66,3 +66,12 @@ Git分支管理策略
 分支策略：
 	master分支为主干，稳定版本，不作为开发分支使用
 	dev分支为开发分支，团队成员有各自的dev副本，各自在副本上开发，提交，工作完成后，，将各自分支都合并到dev分支，确认无误后合并到master，发布
+
+Git的Bug分支
+	工作中需要解决bug（如代号101的bug）时，在目标分支（如master)上创建bug分支（如git checkout -b isure101），解决后git add，git commit，最后git checkout 目标分支（master），git merge bug分支（如isure101）。
+	实际情况很可能这样，在dev分支开发某需求到中途时，突然需要紧急解决bug（如代号101），由于当前工作区的内容由于某些原因（如代码不完善，代码不能工作）不能提交到dev分支，
+	这时如果不保存当前工作区的内容，直接创建bug分支，开发到中途的代码就将丢失掉，严重影响工作，因此git提供gitstash命令来保存当前的工作区，使我们解决完bug后可以轻松继
+	续之前未完成的工作。
+	命令git stash list将罗列保存的工作区，还原方式有两个：
+		1.git stash apply 工作区标识名，还原工作区，但stash不会被删除，需要使用git stash drop 工作区标识名 删除
+		2.git stash pop还原工作区并删除
