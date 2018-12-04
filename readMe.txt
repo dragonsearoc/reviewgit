@@ -75,3 +75,7 @@ Git的Bug分支
 	命令git stash list将罗列保存的工作区，还原方式有两个：
 		1.git stash apply 工作区标识名，还原工作区，但stash不会被删除，需要使用git stash drop 工作区标识名 删除
 		2.git stash pop还原工作区并删除
+
+Git的feature分支
+	用于开发新功能、实验性质的分支，为了不搞乱已有的代码，建议使用feature分支开发，完成后，合并，删除该feature分支。
+	强制Git删除未合并过的分支，使用命令 git branch -D 分支名称。
